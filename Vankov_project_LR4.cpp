@@ -8,21 +8,41 @@ using namespace std;
 int a, b = 0;
 
 // Is string a num?
-bool CanStoi()
+bool CanStoi(string& input)
 {
+    if (input.empty()) return false;
 
+    int num;
+
+    try
+    {
+        num = stoi(input);
+    } catch (...) { return false; }
+
+    return true;
 }
 
 // Enter correct number from keyboard
 void EnterNumber(int& num, string message)
 {
+    string input;
 
+    cout << message;
+    getline(cin, input);
+
+    while (!CanStoi(input))  
+    {
+        cout << message;
+        getline(cin, input);
+    }
+
+    num = stoi(input);
 }
 
 // Function to set value of variable "a"
 void EnterA()
 {
-
+    EnterNumber(a, "Enter value of a: ");
 }
 
 // Function to set value of variable "b"
