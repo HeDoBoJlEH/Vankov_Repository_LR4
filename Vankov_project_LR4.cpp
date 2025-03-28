@@ -42,7 +42,7 @@ void EnterNumber(int& num, string message)
 // Function to set value of variable "a"
 void EnterA()
 {
-
+    EnterNumber(a, "Enter value of a: ");
 }
 
 // Function to set value of variable "b"
