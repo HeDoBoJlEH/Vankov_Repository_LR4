@@ -40,7 +40,7 @@ void ExecutePlus()
 // Function to minus variables "a" and "b"
 void ExecuteMinus()
 {
-
+    cout << "A minus B: " << a - b << endl;
 }
 
 struct MenuItem
