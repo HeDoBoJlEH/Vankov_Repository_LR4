@@ -48,7 +48,7 @@ void EnterA()
 // Function to set value of variable "b"
 void EnterB()
 {
-
+    EnterNumber(b, "Enter value of b: ");
 }
 
 // Function to sum up variables "a" and "b"
